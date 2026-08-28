@@ -1,0 +1,55 @@
+{
+  "name": "@notibase/node",
+  "version": "0.4.0",
+  "description": "Official Node.js SDK for Notibase \u2014 messaging infrastructure for developers",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notibaseorg/notibase-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notibaseorg/notibase-node/issues"
+  },
+  "homepage": "https://notibase.dev/node.html",
+  "keywords": [
+    "push",
+    "notifications",
+    "web-push",
+    "apns",
+    "fcm",
+    "messaging"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "prepublishOnly": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^22.0.0"
+  },
+  "sideEffects": false
+}
