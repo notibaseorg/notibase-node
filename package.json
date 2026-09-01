@@ -1,0 +1,63 @@
+{
+  "name": "@notibase/node",
+  "version": "0.6.0",
+  "description": "Notibase server SDK \u2014 send push, email and SMS, manage users and read delivery from Node.js",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notibaseorg/notibase-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notibaseorg/notibase-node/issues"
+  },
+  "homepage": "https://notibase.dev/node.html",
+  "keywords": [
+    "push-notifications",
+    "push",
+    "notifications",
+    "web-push",
+    "apns",
+    "fcm",
+    "firebase",
+    "onesignal",
+    "onesignal-alternative",
+    "in-app-messages",
+    "messaging",
+    "sms",
+    "email",
+    "notibase"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "prepublishOnly": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^22.0.0"
+  },
+  "sideEffects": false
+}
